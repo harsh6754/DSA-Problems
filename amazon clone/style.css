@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    border:border-box;
+}
+.navbar{
+    height: 60px;
+    background-color:#fff;
+    color: #000;
+}
+.nav-logo{
+    height: 50px;
+    width: 100px;
+
+}
+.logo{
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}

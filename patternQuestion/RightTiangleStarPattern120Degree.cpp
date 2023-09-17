@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"enter the value of n:"<<endl;
+    cin>>n;
+
+    int rows1=1;
+    while(rows1<=n){
+        int space =  rows1 ;
+        while(space){
+            cout<<" ";
+            space=space - 1;
+        }
+        int col=1;
+        while(col<=rows1){
+            cout<<"*"<<" ";
+            col+=1;
+        }
+        cout<<endl;
+        rows1+=1;
+    }
+     
+}
