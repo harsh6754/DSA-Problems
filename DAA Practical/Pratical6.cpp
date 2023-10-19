@@ -29,3 +29,4 @@ int main()
     cout << "The duplicate element is " << findDuplicate(arr) << endl;
     return 0;
 }
+    

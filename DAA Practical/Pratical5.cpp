@@ -42,5 +42,3 @@ int main()
 	cout << findPlatform(arr, dep, n);
 	return 0;
 }
-
-// Code contributed by farzams101

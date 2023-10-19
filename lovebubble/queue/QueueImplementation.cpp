@@ -10,6 +10,7 @@ int main()
     q.push(4);
 
     cout<<"Front of q is ->"<<" "<<q.front()<<endl;
+    cout<<"Back of q is ->"<<" "<<q.back()<<endl;
     
     cout<<"The Size of Queue->"<<q.size()<<endl;
 
@@ -17,6 +18,7 @@ int main()
     q.pop();
 
      cout<<"Front of q is ->"<<" "<<q.front()<<endl;
+     cout<<"Back of q is ->"<<" "<<q.back()<<endl;
 
      cout<<"The Size of Queue->"<<q.size()<<endl;
 
