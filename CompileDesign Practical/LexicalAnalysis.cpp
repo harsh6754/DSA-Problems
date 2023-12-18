@@ -289,9 +289,8 @@ bool isSymbol(char ch) {
 
 bool isNumber(const char* str) {
     int i, len = strlen(str), numOfDecimal = 0;
-    if (len == 0) {
+    if (len == 0)  
         return false;
-    }
     for (i = 0; i < len; i++) {
         if (numOfDecimal > 1 && str[i] == '.') {
             return false;
@@ -355,7 +354,7 @@ void parse(const char* str) {
 }
 
 int main() {
-    const char c[100] = "int m = n + 3 / p*(5*l-)";
+    const char c[100] = "int m = n + 3  p*(5*l-);d";
     parse(c);
     return 0;
 }
