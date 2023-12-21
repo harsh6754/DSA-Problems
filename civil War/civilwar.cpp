@@ -1,89 +1,57 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <map>
-
+// C++ implementation of brute
+// force solution.
+#include <bits/stdc++.h>
 using namespace std;
 
-// Function to calculate the factorial
-long long factorial(int n)
+// Function to check if the given
+// number has repeated digit or not
+int repeated_digit(int n)
 {
-    if (n <= 1)
-    {
-        return 1;
-    }
-    return n * factorial(n - 1);
+	unordered_set<int> s;
+
+ 
+	while(n != 0)
+	{
+		int d = n % 10;
+
+	 
+		if(s.find(d) != s.end())
+		{
+		 
+			return 0;
+		}
+		s.insert(d);
+		n = n / 10;
+	}
+	 
+	return 1;
 }
 
-// Function to generate all legal subsets of the given strings
-vector<string> generateSubsets(vector<string> &strings)
+int calculate(int n,int m)
 {
-    int n = strings.size();
-    vector<string> subsets;
+	int answer = 0;
 
-    // Generate subsets with increasing lengths
-    for (int i = 0; i < (1 << n); ++i)
-    {
-        string subset;
-        for (int j = 0; j < n; ++j)
-        {
-            if (i & (1 << j))
-            {
-                subset += strings[j] + ",";
-            }
-        }
-        if (!subset.empty())
-        {
-            subset.pop_back(); // Remove the trailing comma
-            subsets.push_back(subset);
-        }
-    }
+	// Traversing through the range
+	for(int i = n; i < m + 1; ++i)
+	{
 
-    // Create a map to store the original order of input strings
-    map<string, int> originalOrder;
-    for (int i = 0; i < n; ++i)
-    {
-        originalOrder[strings[i]] = i;
-    }
+		 
+		answer = answer + repeated_digit(i);
+	}
 
-    // Sort the subsets based on the original order of input strings
-    sort(subsets.begin(), subsets.end(), [&](const string &a, const string &b)
-         {
-        int lenA = a.length();
-        int lenB = b.length();
-        int len = min(lenA, lenB);
-        for (int i = 0; i < len; ++i) {
-            if (a[i] != b[i]) {
-                return originalOrder[a.substr(i, 1)] < originalOrder[b.substr(i, 1)];
-            }
-        }
-        return lenA < lenB; });
-
-    return subsets;
+	return answer ;
 }
 
+// Driver Code
 int main()
 {
-    int N, R;
-    cin >> N >> R;
+	int n;
+    cin>>n;
 
-    vector<string> strings(N);
-    for (int i = 0; i < N; ++i)
-    {
-        cin >> strings[i];
-    }
+    int m;
+    cin>>m;
 
-    vector<string> subsets = generateSubsets(strings);
-
-    if (R <= subsets.size())
-    {
-        cout << subsets[R - 1] << endl;
-    }
-    else
-    {
-        cout << "Invalid rank." << endl;
-    }
-
-    return 0;
+	// Calling the calculate
+	cout << calculate(n, m);
+	return 0;
 }
