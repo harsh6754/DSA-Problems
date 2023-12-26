@@ -14,6 +14,15 @@ void printColumnSum(int arr[][MAX_COLS], int row, int col) {
     }
 }
 
+void printRowSum(int arr[][MAX_COLS], int row, int col) {
+    for (int i = 0; i < row; i++) {
+        int sum = 0;
+        for (int j = 0; j < col; j++) {
+            sum += arr[i][j];
+        }
+        cout << "Sum of elements in row " << i + 1 << ": " << sum << endl;
+    }
+}
 
 int main() {
     int row, col;
@@ -47,7 +56,7 @@ int main() {
     }
 
     printColumnSum(arr, row, col);
- 
+    printRowSum(arr, row, col);
 
     return 0;
 }
