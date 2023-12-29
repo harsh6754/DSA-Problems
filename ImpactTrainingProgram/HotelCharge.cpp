@@ -4,29 +4,51 @@
 //[1,3,2,7,8,9,10] 1500*Days
 //[4,5,6,11,12] 1500+20%*Days
 
-
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    int amount;
-    cout<<"Enter Per Day Room Amount"<<endl;
-    cin>>amount;
+int calculateRoomCharge(int daysStayed, const std ::vector<int>& daysList, int month, int perDayRoomCharge,  int PercentInAnotherMonth) {
+    int roomCharge = 0;
 
-    int days;
-    cout<<"Enter How Many Days You Stay in Hotel"<<endl;
-    cin>>days;
+    for (int day : daysList) {
+        if (day <= month) {
+            roomCharge += perDayRoomCharge * daysStayed;
+        } else {
+            roomCharge += static_cast<int>(perDayRoomCharge + (PercentInAnotherMonth / 100.0) * perDayRoomCharge) * daysStayed;
+        }
+    }
 
-    int rent;
-    cout<<"Rent in percent"<<endl;
-    cin>>rent;
+    return roomCharge;
+}
 
-    
+int main() {
+    // Assuming month is March (month number 3)
+    int month;
+    cout << "Enter Month: ";
+    cin >> month;
 
+    // Assuming per day room charge is 1500
+    int perDayRoomCharge;
+    cout << "Enter the amount per day: ";
+    cin >> perDayRoomCharge;
 
-    cout<<"Hotel Rent in Specific Month"<<HotelRent(amount,rent,days)<<endl;
+    // Assuming days stayed is 2
+    int daysStayed;
+    cout << "Enter days Stayed in Hotel: ";
+    cin >> daysStayed;
 
+    float PercentInAnotherMonth;
+    cout << "Enter Percent in Another Month: ";
+    cin >> PercentInAnotherMonth;
+
+    // List of days
+    vector<int> daysList = {1, 3, 2, 7, 8, 9, 10, 4, 5, 6, 11, 12};
+
+    // Calculate room charge
+    int totalRoomCharge = calculateRoomCharge(daysStayed, daysList, month, perDayRoomCharge, PercentInAnotherMonth);
+
+    // Display the result
+    cout << "Total Room Charge for month " << month << ": " << totalRoomCharge << endl;
 
     return 0;
 }
