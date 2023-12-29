@@ -4,6 +4,7 @@
 //[1,3,2,7,8,9,10] 1500*Days
 //[4,5,6,11,12] 1500+20%*Days
 
+
 #include<bits/stdc++.h>
 using namespace std;
 
