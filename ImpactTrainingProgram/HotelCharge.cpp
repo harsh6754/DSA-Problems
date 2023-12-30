@@ -25,10 +25,7 @@ int calculateRoomCharge(int daysStayed, const std ::vector<int>& daysList, int m
 int main() {
     // Assuming month is March (month number 3)
     int month;
-    cout << "Enter Month: ";
     cin >> month;
-
-    // Assuming per day room charge is 1500
     int perDayRoomCharge;
     cout << "Enter the amount per day: ";
     cin >> perDayRoomCharge;
