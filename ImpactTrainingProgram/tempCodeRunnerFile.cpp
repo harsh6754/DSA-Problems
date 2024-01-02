@@ -1,21 +1,51 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <iostream>
+// #include <vector>
 
-int fibonacci(int n) {
-    if (n <= 1) {
-        return n;
-    }
-    
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}
+// using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
+// bool checkFun(int X, int A, int N, int Z) {
+//     int val = A * N + Z;
+//     return val == X;
+// }
 
-    int result = fibonacci(n);
+// vector<int> findDivisor(int val) {
+//     vector<int> ans;
+//     for (int i = 1; i <= val; i++) {
+//         if (val % i == 0) {
+//             ans.push_back(i);
+//         }
+//     }
+//     return ans;
+// }
 
-    cout << "The term " << n << " in the Fibonacci series is " << result << endl;
+// void findAllPossibleOutput(int X, int A) {
+//     bool flag = true;
+//     for (int i = 1; i <= X; i++) {
+//         vector<int> divisors = findDivisor(i);
 
-    return 0;
-}
+//         for (auto z : divisors) {
+//             if (checkFun(X, A, i, z)) {
+//                 flag = false;
+//                 cout << i;
+//                 return;  // Exit the function once a valid pair is found
+//             }
+//         }
+//     }
+
+//     if (flag) {
+//         cout << "None";
+//     }
+// }
+
+// int main() {
+//     int A, X;
+//     cin >> X >> A;
+
+//     if (A > X || A < 1 || X < 1 || X > 1000000) {
+//         cout << "None";
+//     } else {
+//         findAllPossibleOutput(X, A);
+//     }
+
+//     return 0;
+// }
