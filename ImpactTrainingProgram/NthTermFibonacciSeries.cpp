@@ -9,7 +9,9 @@ int fib(int n)
 		return a;
 	for (i = 2; i <= n; i++) {
 		c = a + b;
-		a = b;
+		a = b;   
+
+		
 		b = c;
 	}
 	return b;
