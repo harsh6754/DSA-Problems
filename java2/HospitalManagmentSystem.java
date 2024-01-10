@@ -18,6 +18,7 @@ class staff
         sex = input.nextLine();
         System.out.print("salary:-");
         salary = input.nextInt();
+        input.close();
     }
     void staff_info()
     {
@@ -42,6 +43,7 @@ class medical
         med_cost = input.nextInt();
         System.out.print("no of unit:-");
         count = input.nextInt();
+        input.close();
     }
     void find_medi()
     {
@@ -59,6 +61,7 @@ class lab
         fecility = input.nextLine();
         System.out.print("cost:-");
         lab_cost = input.nextInt();
+           input.close();
     }
     void feci_list()
     {
@@ -73,6 +76,7 @@ class fecility //Sorry Facility but do not change the name
         Scanner input = new Scanner(System.in);
         System.out.print("fecility:-");
         fec_name = input.nextLine();
+           input.close();
     }
     void show_feci()
     {
@@ -98,6 +102,7 @@ class doctor
         doc_qual = input.nextLine();
         System.out.print("room no.:-");
         droom = input.nextInt();
+           input.close();
     }
     void doctor_info()
     {
@@ -124,6 +129,7 @@ class patient
         admit_status = input.nextLine();
         System.out.print("age:-");
         age = input.nextInt();
+           input.close();
     }
     void patient_info()
     {
@@ -525,6 +531,7 @@ public class HospitalManagmentSystem{
             }
             System.out.println("\nReturn to MAIN MENU Press 1");
             status = input.nextInt();
+               input.close();
         }
     }
 }

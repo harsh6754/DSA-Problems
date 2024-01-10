@@ -1,4 +1,4 @@
-import java.io.*;
+//import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -15,6 +15,7 @@ public class Solution {
         int result = findkth(prime, k);
         
         System.out.println(result);
+        sc.close();
         
     }
     

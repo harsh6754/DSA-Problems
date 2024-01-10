@@ -28,5 +28,6 @@ public class CoinArrangment {
         int Y = scanner.nextInt();
         int result = maxCoins(N, M, X, Y);
         System.out.println(result);
+        scanner.close();
     }
 }
