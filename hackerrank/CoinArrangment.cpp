@@ -26,8 +26,11 @@ int maxCoins(int N, int M, int X, int Y) {
 }
 
 int main() {
-    int N, M, X, Y;
-    cin >> N >> M >> X >> Y;
+    int N = 3;
+    int M = 3;
+    int X = 6;
+    int Y = 3;
+    
 
     int result = maxCoins(N, M, X, Y);
 
