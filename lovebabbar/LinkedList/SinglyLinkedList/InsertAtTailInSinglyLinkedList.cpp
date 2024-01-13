@@ -1,7 +1,10 @@
-#include<iostream>
+
+#include <iostream>
 using namespace std;
-class Node{
-    public:
+
+class Node
+{
+public:
     int data;
     Node *next;
 
@@ -12,46 +15,53 @@ class Node{
     }
 };
 
-// void insertAtHead(Node* &head,int d)
-// {
-//     Node *temp = new Node(d);
-//     temp -> next =head;
-//     head = temp;
-// }
-
-void insertAtTail(Node *&tail,int d)
+void insertAtTail(Node *&tail, int d)
 {
     Node *temp = new Node(d);
-        tail->next=temp;
-        tail = temp;
+    tail->next = temp;
+    tail = temp;
 }
 
-void print(Node* &head)
+void print(Node *&head)
 {
-    Node* temp = head;
-    while(temp!=NULL){
-        cout<<temp ->data <<" ";
-        temp=temp->next;
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main()
 {
-    Node*node1 = new Node(10);
-   // cout<<node1->data<<endl;
-    //cout<<node1->next<<endl;
+    int initialData;
+    cin >> initialData;
 
-   Node*head = node1;
-    Node*tail = node1;
+    Node *node1 = new Node(initialData);
+    Node *head = node1;
+    Node *tail = node1;
     print(head);
 
-    //insertAtHead(head,20);
-    insertAtTail(tail,20);
+    int newData;
+    cin >> newData;
+    insertAtTail(tail, newData);
     print(head);
 
-    //insertAtHead(head,30);
-    insertAtTail(tail,30);
+    cin >> newData;
+    insertAtTail(tail, newData);
+    print(head);
+
+    cin >> newData;
+    insertAtTail(tail, newData);
+    print(head);
+
+    cin >> newData;
+    insertAtTail(tail, newData);
+    print(head);
+
+    cin >> newData;
+    insertAtTail(tail, newData);
     print(head);
 
     return 0;
