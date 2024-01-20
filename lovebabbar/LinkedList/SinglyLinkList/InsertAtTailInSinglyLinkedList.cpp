@@ -1,5 +1,4 @@
-
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Node
@@ -14,10 +13,15 @@ public:
         this->next = NULL;
     }
 };
-
-void insertAtTail(Node *&tail, int d)
+void InsertAtHead(Node *&head, int data)
 {
-    Node *temp = new Node(d);
+    Node *temp = new Node(data);
+    temp->next = head;
+    head = temp;
+}
+void InsertAtTail(Node *&tail, int data)
+{
+    Node *temp = new Node(data);
     tail->next = temp;
     tail = temp;
 }
@@ -33,35 +37,25 @@ void print(Node *&head)
     cout << endl;
 }
 
+
 int main()
 {
-    int initialData;
-    cin >> initialData;
+    Node *node1 = new Node(0);
+    cout << node1->data << endl;
+    cout << node1->next << endl;
 
-    Node *node1 = new Node(initialData);
     Node *head = node1;
     Node *tail = node1;
+
     print(head);
 
-    int newData;
-    cin >> newData;
-    insertAtTail(tail, newData);
+    InsertAtTail(tail, 1);
     print(head);
 
-    cin >> newData;
-    insertAtTail(tail, newData);
+    InsertAtTail(tail, 2);
     print(head);
 
-    cin >> newData;
-    insertAtTail(tail, newData);
-    print(head);
-
-    cin >> newData;
-    insertAtTail(tail, newData);
-    print(head);
-
-    cin >> newData;
-    insertAtTail(tail, newData);
+    InsertAtTail(tail, 3);
     print(head);
 
     return 0;

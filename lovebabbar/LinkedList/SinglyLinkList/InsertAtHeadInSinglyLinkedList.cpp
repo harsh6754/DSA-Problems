@@ -1,5 +1,6 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+
 class Node
 {
 public:
@@ -12,40 +13,38 @@ public:
         this->next = NULL;
     }
 };
-
-void insertAtHead(Node *&head, int d)
+void InsertAtHead(Node *&head, int data)
 {
-    Node *temp = new Node(d);
+    Node *temp = new Node(data);
     temp->next = head;
     head = temp;
 }
 void print(Node *&head)
 {
-    Node *temp = head;
-    while (temp != NULL)
+    Node * temp = head;
+    while(temp != NULL)
     {
-        cout << temp->data << " ";
+        cout<< temp -> data<<" ";
         temp = temp->next;
     }
-    cout << endl;
+    cout<<endl;
 }
 
 int main()
 {
-    Node *node1 = new Node(10);
-    // cout<<node1->data<<endl;
-    // cout<<node1->next<<endl;
+    Node *node1 = new Node(0);
+    cout << node1->data << endl;
+    cout << node1->next << endl;
 
     Node *head = node1;
     print(head);
-
-    insertAtHead(head, 20);
+    InsertAtHead(head,1);
+    print(head);
+    InsertAtHead(head,2);
+    print(head);
+    InsertAtHead(head,3);
     print(head);
 
-    insertAtHead(head, 30);
-    print(head);
 
-    insertAtHead(head, 40);
-    print(head);
     return 0;
 }
