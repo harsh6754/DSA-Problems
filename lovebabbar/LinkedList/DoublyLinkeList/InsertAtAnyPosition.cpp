@@ -38,6 +38,45 @@ void insertAtTail(Node *&tail, int data)
     }
 }
 
+void insertAtPosition(Node *&head, int data, int position)
+{
+    Node *temp = new Node(data);
+    if (position == 1)
+    {
+        temp->next = head;
+        if (head != nullptr)
+        {
+            head->prev = temp;
+        }
+        head = temp;
+    }
+    else
+    {
+        Node *current = head;
+        for (int i = 1; i < position - 1 && current != nullptr; ++i)
+        {
+            current = current->next;
+        }
+
+        if (current != nullptr)
+        {
+            temp->next = current->next;
+            temp->prev = current;
+            if (current->next != nullptr)
+            {
+                current->next->prev = temp;
+            }
+            current->next = temp;
+        }
+        else
+        {
+            // If position is out of bounds, you can add an error message or handle it as needed.
+            cout << "Invalid position." << endl;
+            delete temp; // Delete the allocated node to avoid memory leak.
+        }
+    }
+}
+
 void print(Node *head)
 {
     Node *temp = head;
@@ -69,5 +108,10 @@ int main()
     insertAtTail(tail, 3);
     print(head);
 
+    insertAtPosition(head, 0, 1);
+    print(head);
+
+    insertAtPosition(tail, 4, 2);
+    print(head);
     return 0;
 }
