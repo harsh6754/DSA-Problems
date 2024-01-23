@@ -1,64 +1,74 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.prev = None
-        self.next = None
+class ListNode:
+    def __init__(self, value=0, next=None):
+        self.value = value
+        self.next = next
 
-def reverse_doubly_linked_list_up_to_k(head, k):
-    if not head or k <= 0:
+def reverse_k_group(head, k):
+    if not head or k == 0 or k == 1:
         return head
 
-    current = head
-    count = 1
+    # Function to get the length of the linked list
+    def get_length(node):
+        length = 0
+        while node:
+            length += 1
+            node = node.next
+        return length
 
-    while count < k and current.next is not None:
-        current = current.next
-        count += 1
+    # Function to reverse a linked list within the given range
+    def reverse_in_range(start, end):
+        prev, current = None, start
+        while current and current != end:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        return prev
 
-    temp_head = head
-    temp_tail = current
-    while temp_head != temp_tail:
-        temp_head.data, temp_tail.data = temp_tail.data, temp_head.data
-        temp_head = temp_head.next
-        temp_tail = temp_tail.prev
+    length = get_length(head)
+    dummy = ListNode(0)
+    dummy.next = head
+    prev_group_end = dummy
 
-    return head
+    for _ in range(length // k):
+        group_start = prev_group_end.next
+        group_end = group_start
 
-def print_doubly_linked_list(head):
-    current = head
-    while current is not None:
-        print(current.data, end=" <-> ")
-        current = current.next
-    print("None")
+        for _ in range(k - 1):
+            group_end = group_end.next
 
+        next_group_start = group_end.next
+        group_end.next = None
 
-def create_doubly_linked_list():
-    elements = input("Enter the elements of the doubly linked list separated by spaces: ").split()
-    head = None
-    tail = None
-    for element in elements:
-        new_node = Node(int(element))
-        if head is None:
-            head = new_node
-            tail = head
-        else:
-            tail.next = new_node
-            new_node.prev = tail
-            tail = new_node
-    return head
+        prev_group_end.next = reverse_in_range(group_start, next_group_start)
+        group_start.next = next_group_start
 
+        prev_group_end = group_start
 
-k = int(input("Enter the value of k: "))
+    return dummy.next
 
+# Function to print the linked list
+def print_linked_list(head):
+    while head:
+        print(head.value, end=" ")
+        head = head.next
+    print()
 
-head = create_doubly_linked_list()
+# Input the linked list
+elements = list(map(int, input().split()))
+k = int(input())
 
+# Create the linked list from input
+head = ListNode(elements[0])
+current = head
+for value in elements[1:]:
+    if value == -1:
+        break
+    current.next = ListNode(value)
+    current = current.next
 
-print("\nOriginal Doubly Linked List:")
-print_doubly_linked_list(head)
+# Reverse the linked list in groups of size 'k'
+head = reverse_k_group(head, k)
 
-
-head = reverse_doubly_linked_list_up_to_k(head, k)
-
-print("\nReversed Doubly Linked List (up to {}th index):".format(k))
-print_doubly_linked_list(head)
+# Print the modified linked list
+print_linked_list(head)
