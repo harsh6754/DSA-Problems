@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int maxWater(int arr[], int n)
+int maxWater(int arr[],int n)
 {
+
     if (n < 3)
     {
         return 0;
@@ -31,15 +32,17 @@ int maxWater(int arr[], int n)
 
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    int n = 4;
+    int arr[n]={7,4,0,9};
+    // int n;
+    // cin >> n;
+    // int arr[n];
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
 
-    cout << maxWater(arr, n);
+    cout<< maxWater(arr,n);
 
     return 0;
 }
