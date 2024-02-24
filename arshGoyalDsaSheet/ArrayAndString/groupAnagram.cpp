@@ -49,5 +49,7 @@ int main() {
         cout << endl;
     }
 
+    cout << "Number of groups of anagrams: " << result.size() << endl;
+
     return 0;
 }
