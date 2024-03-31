@@ -12,4 +12,4 @@ book_freq = Counter(book_titles)
 sorted_book_freq = sorted(book_freq.items())
 
 for title, freq in sorted_book_freq:
-    print(f'{title}:{freq}')
+    print(f'{title}: {freq}')
