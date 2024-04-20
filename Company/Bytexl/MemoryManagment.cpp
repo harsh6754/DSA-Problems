@@ -26,11 +26,11 @@ int main() {
     int physical_memory_bits = static_cast<int>(log2(physical_memory_kb * 1024));
     int page_table_index_bits = address_space_bits - page_size_bits;
 
-    cout << "\"VPN\": " << page_table_index_bits << endl;
-    cout << "\"Page Offset\": " << page_size_bits << endl;
-    cout << "\"Page Table Index\": " << page_table_index_bits << endl;
-    cout << "\"Frame Number\": " << physical_memory_bits - page_size_bits << endl;
-    cout << "\"Offset within a Frame\": " << page_size_bits << endl;
+    cout << "\"VPN\":" << page_table_index_bits <<" bits"<< endl;
+    cout << "\"Page Offset\":" << page_size_bits<<" bits" << endl;
+    cout << "\"Page Table Index\":" << page_table_index_bits <<" bits"<< endl;
+    cout << "\"Frame Number\":" << physical_memory_bits - page_size_bits <<" bits"<< endl;
+    cout << "\"Offset within a Frame\":" << page_size_bits<<" bits" << endl;
 
     return 0;
 }
