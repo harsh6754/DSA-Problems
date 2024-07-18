@@ -1,32 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-void Encrypt(string inputText, int shift) {
-    for(char &s: inputText) {
-        if(isalpha(s)) {
-            if(s<'a') {
-                s+=shift;          
-                if(s>'Z') s-=26;   
-            } else {
-                s+=shift;       
-                if(s>'z') s-=26;
-            }
-        } 
-    }
-
-    cout << "The encoded message is " << inputText << "\n";
-}
-void Decrypt(string inputText, int shift) {
-    for(char &s: inputText) {
-        if(isalpha(s)) {
-            if(s<'a') {
-                s-=shift; 
-                if(s<'A') s+=26; 
-            } else {
-                s-=shift; 
-                if(s<'a') s+=26;
-            }
-        }
-    }
 
     cout << "The decoded message is " << inputText << "\n";
 }
