@@ -57,6 +57,7 @@ int main() {
     ListNode* head1 = nullptr;
     ListNode* head2 = nullptr;
     int n, value;
+    cin>>n;
 
     cout << "Enter number of elements for list 1: ";
     cin >> n;
