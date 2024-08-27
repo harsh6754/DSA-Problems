@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    Node(int data){
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+void insertAtHead(Node*& head, int newData){
+    Node* newNode = new Node(newData);
+    if(head == NULL){
+        newNode->next = newNode;
+        head = newNode;
+    }else{
+        Node* temp = head;
+        while(temp->next != head){
+            temp = temp->next;
+        }
+        newNode->next = head;
+        temp->next = newNode;
+        head = newNode;
+    }
+}
+
+void displayList(Node* head) {
+    if (head == NULL) return;
+
+    Node* temp = head;
+    do {
+        cout << temp->data;
+        if (temp->next != head) {
+            cout << "<->";
+        }
+        temp = temp->next;
+    } while (temp != head);
+    cout << endl;
+}
+
+int main(){
+    Node* head = NULL;
+    int n,value;
+    cin>>n;
+
+    for(int i = 0;i<n;i++){
+        cout<<"Enter the value "<<i+1<<":";
+        cin>>value;
+        insertAtHead(head,value);
+    }
+    displayList(head);
+    return 0;
+}

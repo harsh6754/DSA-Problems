@@ -9,13 +9,14 @@ class Node{
     Node(int data){
         this->data = data;
         this->next = NULL;
-        this->prev= NULL;
+        this->prev = NULL;
     }
 };
-void insertAtTail(Node*& head, int newData) {
+
+void insertAtTail(Node*& head, int newData){
     Node* newNode = new Node(newData);
-    if (head == NULL) {
-        head = newNode;
+    if(head == NULL){
+        head=newNode;
         return;
     }
     Node* temp = head;
@@ -26,16 +27,20 @@ void insertAtTail(Node*& head, int newData) {
     newNode->prev = temp;
 }
 
-void deleteAtHead(Node*& head) {
-    if (head == NULL) {
-        cout << "The list is already empty." << endl;
+void deleteAtTail(Node*& head){
+    if(head == NULL){
+        return;
+    }
+    if(head->next == NULL){
+        delete head;
+        head == NULL;
         return;
     }
     Node* temp = head;
-    head = head->next;
-    if (head != NULL) {
-        head->prev = NULL;
+    while(temp->next != NULL){
+        temp = temp->next;
     }
+    temp->prev->next = NULL;
     delete temp;
 }
 
@@ -48,19 +53,21 @@ void displayList(Node* head){
         }
         temp = temp->next;
     }
-    cout << endl;
+    cout <<endl;
 }
 
 int main(){
     Node* head = NULL;
     int n,value;
     cin>>n;
+
     for(int i = 0;i<n;i++){
         cout<<"Enter the value "<<i+1<<":";
         cin>>value;
         insertAtTail(head,value);
     }
-    deleteAtHead(head);
+    deleteAtTail(head);
     displayList(head);
+
     return 0;
 }
