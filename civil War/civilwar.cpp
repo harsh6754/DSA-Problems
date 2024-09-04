@@ -1,5 +1,6 @@
 // C++ implementation of brute
-// force solution.
+// force solution. 
+//code By Harsh
 #include <bits/stdc++.h>
 using namespace std;
 
