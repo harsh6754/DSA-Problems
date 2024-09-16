@@ -31,5 +31,4 @@ int main(){
 	cin>>src>>dest;
 	solve(src,dest,mp);
 	cout<<mp[dest]<<endl;
-	return 0;	
-}
+	return 0;
