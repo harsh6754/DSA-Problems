@@ -1,0 +1,1 @@
+columnNumber = columnNumber/26;
