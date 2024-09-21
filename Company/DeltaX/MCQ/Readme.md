@@ -31,3 +31,7 @@ Ans:- 7 Application presentation session tranport network data physical
 Q8) Which layer does the data link layer take packets from and encapsulate them into frames for transmission?
 
 Ans:- Network Layer
+
+Q9) What type of tranmission is involved in communication between a computer and a keyboards?
+
+Ans:- Simplex
