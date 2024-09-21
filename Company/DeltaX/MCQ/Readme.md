@@ -23,3 +23,7 @@ Ans:- A compiler translate the entire program at once, while an interpreter tran
 Q6) Select INSTR("CampusMonk","p") AS MatchPosition;
 
 Ans:- 4
+
+Q7) How many layer are there in the ISO OSI reference model?
+
+Ans:- 7
