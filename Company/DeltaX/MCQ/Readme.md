@@ -61,4 +61,19 @@ Q15) Which one of the following is the application of stack data Structure
 
 Ans:- Function Call Managment/Undo-Redo Mechanism/ Expression Evalution/Balanced Parenthesis Checking/ DFD/Backtracking/ Browser History Navigation/Parsing/Memory Managment/Tree Traversal/Stock span Problem
 
-Q16)
+Q16) Suppose the number 7,5,1,8,3,6,0,9,4,2 are insert in that order into an initially rmpty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultnat tree?
+
+Ans:- 
+            7
+         /     \
+        5       8
+      /   \      \
+     1      6     9
+    / \   /   \
+   0   3
+      / \
+     2    4
+
+0 1 2 3 4 5 6 7 8 9
+
+Q17)
