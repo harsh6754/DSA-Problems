@@ -50,4 +50,9 @@ Ans:- Runtime Error/Logical Error/Compiler Error
 
 Q13) How many distinct binary tree can be created out of 4 distinct Keys?
 
-Ans:- 14 C(n-1)
+Ans:- 14 
+Catalan number is C(n) = (2n)! / (n! * (n+1)!)
+
+Q14) What is the worst case complexity of binary search using recursion?
+
+Ans:- O(logn)
