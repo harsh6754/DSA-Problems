@@ -39,3 +39,15 @@ Ans:- Simplex
 Q10) Which of the fllowing allows you to connect and login to a remote computer?
 
 Ans:- Telnet/anydesk/RDP/SSH/VNC
+
+Q11) What is the Sizeof(Char) in 32-bit C Compiler
+
+Ans:- 1 Byte
+
+Q12) Exception handling is target at
+
+Ans:- Runtime Error/Logical Error/Compiler Error
+
+Q13) How many distinct binary tree can be created out of 4 distinct Keys?
+
+Ans:- 14 C(n-1)
