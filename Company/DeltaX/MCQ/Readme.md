@@ -27,3 +27,7 @@ Ans:- 4
 Q7) How many layer are there in the ISO OSI reference model?
 
 Ans:- 7 Application presentation session tranport network data physical
+
+Q8) Which layer does the data link layer take packets from and encapsulate them into frames for transmission?
+
+Ans:- Network Layer
