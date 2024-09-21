@@ -38,4 +38,4 @@ Ans:- Simplex
 
 Q10) Which of the fllowing allows you to connect and login to a remote computer?
 
-Ans:- Telnet/anydesk
+Ans:- Telnet/anydesk/RDP/SSH/VNC
