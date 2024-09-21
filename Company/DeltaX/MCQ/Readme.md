@@ -56,3 +56,9 @@ Catalan number is C(n) = (2n)! / (n! * (n+1)!)
 Q14) What is the worst case complexity of binary search using recursion?
 
 Ans:- O(logn)
+
+Q15) Which one of the following is the application of stack data Structure
+
+Ans:- Function Call Managment/Undo-Redo Mechanism/ Expression Evalution/Balanced Parenthesis Checking/ DFD/Backtracking/ Browser History Navigation/Parsing/Memory Managment/Tree Traversal/Stock span Problem
+
+Q16)
