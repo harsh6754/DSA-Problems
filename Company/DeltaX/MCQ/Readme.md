@@ -74,6 +74,10 @@ Ans:-
       / \
      2    4
 
-0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9 Maintain Accenending Order
 
-Q17)
+Q17) The Average depth of a binary search tree is:
+
+Ans:- O(logn)
+
+Q18)
