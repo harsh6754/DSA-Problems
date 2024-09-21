@@ -35,3 +35,7 @@ Ans:- Network Layer
 Q9) What type of tranmission is involved in communication between a computer and a keyboards?
 
 Ans:- Simplex
+
+Q10) Which of the fllowing allows you to connect and login to a remote computer?
+
+Ans:- Telnet/anydesk
