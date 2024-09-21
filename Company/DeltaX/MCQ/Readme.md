@@ -46,7 +46,7 @@ Ans:- 1 Byte
 
 Q12) Exception handling is target at
 
-Ans:- Runtime Error/Logical Error/Compiler Error
+Ans:- Runtime Error
 
 Q13) How many distinct binary tree can be created out of 4 distinct Keys?
 
