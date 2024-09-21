@@ -1,0 +1,7 @@
+Q1) What is the function of union operation?
+Ans-> It Combine the result of two different queries which have the same set of attribute in the select clause
+
+Q2) Select statement has 4clause-> where,having,group by, ordered by the correct order of using these clause in select statement is
+Ans-> Where, group by, having order by
+
+Q3)
