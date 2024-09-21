@@ -84,3 +84,10 @@ Q18) Which concept of oops encapsulate the properties(Data) and behaviours(metho
 
 Ans:- Encapsulation
 
+Q19) To Access the services of the operating System, the interface is provided by the _________
+
+Ans:- System Calls
+
+Q20) The ____ program initialize all aspect of the system, from CPU Register to device controller and the contents of main memory, and then start the operating system.
+
+Ans:- Boostrap
