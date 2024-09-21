@@ -15,3 +15,8 @@ z=x^y
 print z;
 
 Ans:- 3
+
+Q5) How does a compiler differ from an interpreter?
+
+Ans:- A compiler translate the entire program at once, while an interpreter translate it line by line
+
