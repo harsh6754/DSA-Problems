@@ -80,4 +80,7 @@ Q17) The Average depth of a binary search tree is:
 
 Ans:- O(logn)
 
-Q18)
+Q18) Which concept of oops encapsulate the properties(Data) and behaviours(methods) of a real-word object into single entity?
+
+Ans:- Encapsulation
+
