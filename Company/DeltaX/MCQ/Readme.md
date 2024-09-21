@@ -6,3 +6,12 @@ Ans-> Where, group by, having order by
 
 Q3)Communication offered by TCP is:
 Ans:- FULL-Duplex
+
+Q4)What will be the output of the following pseudocode?
+
+int x,y,z
+y=1,x=2
+z=x^y
+print z;
+
+Ans:- 3
