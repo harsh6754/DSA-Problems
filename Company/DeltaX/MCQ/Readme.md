@@ -20,3 +20,6 @@ Q5) How does a compiler differ from an interpreter?
 
 Ans:- A compiler translate the entire program at once, while an interpreter translate it line by line
 
+Q6) Select INSTR("CampusMonk","p") AS MatchPosition;
+
+Ans:- 4
