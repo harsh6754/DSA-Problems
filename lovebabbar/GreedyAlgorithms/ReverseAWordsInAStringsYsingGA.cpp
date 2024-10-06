@@ -4,14 +4,15 @@ class Solution{
     public:
     string reverseWords(string S){
         int length = S.length();
-        string ans = " ";
-        string temp = " ";
+        string ans = "";
+        string temp = "";
 
         for(int i = length - 1;i>=0;i--){
             if(S[i] == '.'){
                 reverse(temp.begin(),temp.end());
                 ans = ans + temp;
-                temp = " ";
+                ans.push_back('.');
+                temp ="";
             }else{
                 temp.push_back(S[i]);
             }
