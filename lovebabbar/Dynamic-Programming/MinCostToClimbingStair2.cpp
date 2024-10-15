@@ -7,11 +7,11 @@ class Solution{
         if(n == 0) return costs[0];
         if(n == 1) return costs[1];
 
-        if(dp[n]!=-1){
+        if(dp[n]!= -1){
             return dp[n];
         }
 
-        dp[n] = costs[n] + (solve(costs,n-1,dp) + solve(costs,n-2,dp));
+        dp[n] = costs[n] + min(solve(costs,n-1,dp) + solve(costs,n-2,dp));
         return dp[n];
     }
 
