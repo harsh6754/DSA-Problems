@@ -17,7 +17,7 @@ Welcome to my **DSA Problems** repository! This repository contains solutions to
 This repository serves as a personal tracker of my learning progress, a resource for others to refer to for efficient problem-solving, and preparation material for coding interviews and competitive programming contests.
 
 ## About Me:
-I'm **Harsh Agrawal**, a final year Computer Science and Engineering student with a passion for solving algorithmic challenges. With over 550+ DSA problems solved on LeetCode and experience in full-stack development, I’m actively seeking software engineering roles. I love participating in hackathons, developing innovative solutions, and mentoring others in DSA and full-stack projects.
+I'm **Harsh Agrawal**, a final year Computer Science and Engineering student with a passion for solving algorithmic challenges. With over 600+ DSA problems solved on LeetCode and experience in full-stack development, I’m actively seeking software engineering roles. I love participating in hackathons, developing innovative solutions, and mentoring others in DSA and full-stack projects.
 
 Feel free to explore, star ⭐, or contribute to the repository!
 
