@@ -22,8 +22,9 @@ int calculate(int N, vector<int> Arr) {
         }
     }
 
-    // If all buildings are not already at the maximum height, we need at least one more year to increase the height of one building
-    if (max_count < N) {
+    // If all buildings are not already at the maximum height, we need at least one more year 
+    // only if there are at least two buildings with less than the maximum height
+    if (max_count < N && N - max_count > 1) {
         years++;
     }
 
