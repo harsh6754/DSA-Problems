@@ -20,7 +20,7 @@ Welcome to my **DSA Problems** repository! This repository contains well-structu
   - **Greedy Algorithms**
   - **Binary Search** & Variants
   - **Linked Lists**, **Stacks**, **Queues**, and **Trees**
-  - And much more!
+  - And much more
 
 ## 🎯 Purpose:
 This repository serves as:  
