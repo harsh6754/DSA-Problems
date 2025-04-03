@@ -1,1 +1,1 @@
-  cout << "Enter a string: ";
+maximumTripletValue
