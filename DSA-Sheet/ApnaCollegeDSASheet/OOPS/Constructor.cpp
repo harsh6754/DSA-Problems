@@ -4,6 +4,7 @@
 // no return type.  
 // Only called once at the time of object creation.
 // Memory allocation happens when constructor is called
+//Initialized multiple same name class but different parameters.
 
 
 #include<bits/stdc++.h>
@@ -40,6 +41,7 @@ class Account{
     string balance;
 
     public:
+    // Non-parameterized constructor
     Account(){
         cout << "Constructor called" << endl;
         password = "default";
@@ -62,6 +64,34 @@ class Account{
     string getBalance(){
         return balance;
     }
+};
+
+class Student{
+    private:
+    string password;
+
+    public:
+  
+    // Parameterized constructor
+    Student(string n,string r,string c){
+        name = n;
+        rollno = r;
+        classNo = c;
+        password = "default";
+    }
+
+    string name;
+    string rollno;
+    string classNo;
+
+    void setPassword(string pass){
+        password = pass;
+    }
+
+    string getPassword(){
+        return password;
+    }
+
 };
 
 int main()
@@ -89,6 +119,20 @@ int main()
     cout << "Password: " << a1.getPassword() << endl;
     cout << "Balance: $" << a1.getBalance() << endl;
 
+    Student s1("John Doe", "12345", "10th Grade");
+    cout << "Student Name: " << s1.name << endl;
+    cout << "Roll No: " << s1.rollno << endl;
+    cout << "Class: " << s1.classNo << endl;
+    cout << "Password: " << s1.getPassword() << endl;
+
+
 
     return 0;
 }
+
+// Types of Constructors:
+// 1. Non-parameterized Constructor
+// 2. Parameterized Constructor
+// 3. Copy Constructor
+// 4. Private Constructor
+// 5. Static Constructor
