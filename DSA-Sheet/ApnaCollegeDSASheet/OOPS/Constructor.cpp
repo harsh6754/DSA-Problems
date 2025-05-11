@@ -120,6 +120,7 @@ class Principal{
 
 int main()
 {
+    cout << "----------------------------------------" << endl;
     Teacher t1;
     t1.name = "John Doe";
     t1.subject = "Algebra";
@@ -133,15 +134,19 @@ int main()
     t1.changeDept("Physics");
     cout << "New Department: " << t1.dept << endl;
 
+    cout << "----------------------------------------" << endl;
     Account a1;
     a1.accountId = "A12345";
     a1.userName = "johndoe";
 
+    
     a1.setBalance("1000.00");
     cout << "Account ID: " << a1.accountId << endl;
     cout << "Username: " << a1.userName << endl;
     cout << "Password: " << a1.getPassword() << endl;
     cout << "Balance: $" << a1.getBalance() << endl;
+
+    cout << "----------------------------------------" << endl;
 
     Student s1("John Doe", "12345", "10th Grade");
     cout << "Student Name: " << s1.name << endl;
@@ -150,14 +155,23 @@ int main()
     cout << "Password: " << s1.getPassword() << endl;
 
 
+    cout << "----------------------------------------" << endl;
+    // This.constructor is called when the object is created with parameters
     Principal p1("Dr. Smith", "Principal", "P001");
     cout << "Principal Name: " << p1.name << endl;
     cout << "Position: " << p1.position << endl;
     cout << "ID: " << p1.id << endl;
     p1.setPassword("admin123");
     cout << "Principal Password: " << p1.getPassword() << endl;
-    
 
+
+    cout << "----------------------------------------" << endl;
+    // Copy Constructor
+    Teacher t2(t1);
+    cout << t2.name << endl;
+    cout << t2.dept << endl;
+    cout << t2.subject << endl;
+    cout << "----------------------------------------" << endl;
 
 
     return 0;
