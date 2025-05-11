@@ -94,6 +94,30 @@ class Student{
 
 };
 
+class Principal{
+    private:
+    string password;
+
+    public:
+    string name;
+    string position;
+    string id;
+
+    void setPassword(string pass){
+        password = pass;
+    }
+    string getPassword(){
+        return password;
+    }
+
+    Principal(string name, string pos, string id){
+        this->name = name;
+        this->position = pos;
+        this->id = id;
+    }
+};
+
+
 int main()
 {
     Teacher t1;
@@ -124,6 +148,15 @@ int main()
     cout << "Roll No: " << s1.rollno << endl;
     cout << "Class: " << s1.classNo << endl;
     cout << "Password: " << s1.getPassword() << endl;
+
+
+    Principal p1("Dr. Smith", "Principal", "P001");
+    cout << "Principal Name: " << p1.name << endl;
+    cout << "Position: " << p1.position << endl;
+    cout << "ID: " << p1.id << endl;
+    p1.setPassword("admin123");
+    cout << "Principal Password: " << p1.getPassword() << endl;
+    
 
 
 
