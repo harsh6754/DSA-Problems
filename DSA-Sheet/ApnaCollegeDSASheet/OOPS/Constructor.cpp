@@ -183,3 +183,10 @@ int main()
 // 3. Copy Constructor
 // 4. Private Constructor
 // 5. Static Constructor
+
+// Overloading Constructors: SAME CLASS NAME, DIFFERENT PARAMETERS
+//Overriding Constructors: SAME CLASS NAME, SAME PARAMETERS
+
+//callbyvalue:-  Call by value involves passing a copy of the variable's value to the function.
+//callbyreference:- Call by reference involves passing the variable's address to the function.
+
