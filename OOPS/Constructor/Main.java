@@ -22,7 +22,7 @@ class A {
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         A obj = A.createInstance(30, 40, "World"); // Access via static method
         obj.show();
